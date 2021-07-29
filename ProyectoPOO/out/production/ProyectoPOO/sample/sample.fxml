@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <AnchorPane prefHeight="97.0" prefWidth="1227.0" style="-fx-background-color: #536162;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox prefHeight="133.0" prefWidth="1840.0" AnchorPane.bottomAnchor="-36.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Separator prefHeight="5.0" prefWidth="7.0" visible="false" />
+                  <Text fill="#f3f4ed" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="ODCAJKN SYSTEM" textAlignment="CENTER" wrappingWidth="184.31787109375">
+                     <font>
+                        <Font name="Arial Bold" size="34.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </Text>
+                  <Separator prefHeight="7.0" prefWidth="80.0" visible="false" />
+                  <ImageView fitHeight="70.0" fitWidth="69.0" onMouseClicked="#onHomeButtonClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/icon_home.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets top="15.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Separator prefHeight="1.0" prefWidth="58.0" visible="false" />
+                  <ImageView fitHeight="70.0" fitWidth="69.0" onMouseClicked="#onClientButtonClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/icon_user.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets top="15.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Separator prefHeight="1.0" prefWidth="58.0" visible="false" />
+                  <ImageView fitHeight="62.0" fitWidth="62.0" onMouseClicked="#onProductButtonClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/icon_box.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets top="18.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Separator prefHeight="1.0" prefWidth="58.0" visible="false" />
+                  <ImageView fitHeight="75.0" fitWidth="66.0" onMouseClicked="#onProvButtonClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/icon_proveedor.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets top="15.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Separator prefHeight="1.0" prefWidth="58.0" visible="false" />
+                  <ImageView fitHeight="68.0" fitWidth="66.0" onMouseClicked="#onPedidoButtonClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/icon_buy.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets top="15.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Separator prefHeight="1.0" prefWidth="58.0" visible="false" />
+                  <ImageView fitHeight="78.0" fitWidth="64.0" onMouseClicked="#onExitButtonClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/icon_exit.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets top="15.0" />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="clientPanel" layoutX="-12.0" layoutY="90.0" prefHeight="610.0" prefWidth="1200.0" style="-fx-background-color: #f3f4ed;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="90.0">
+         <children>
+            <JFXTextField fx:id="tfid_cl" focusColor="#c06014" layoutX="205.0" layoutY="81.0" prefHeight="43.0" prefWidth="385.0" promptText="Ingrese el ID" text="ID">
+               <font>
+                  <Font name="Arial" size="24.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="tfnom_cl" focusColor="#c06014" layoutX="205.0" layoutY="145.0" prefHeight="43.0" prefWidth="383.0" promptText="Ingrese el nombre">
+               <font>
+                  <Font name="Arial" size="24.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="tfdir_cl" focusColor="#c06014" layoutX="207.0" layoutY="202.0" prefHeight="43.0" prefWidth="380.0" promptText="Ingrese la dirección">
+               <font>
+                  <Font name="Arial" size="24.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="tftel_cl" focusColor="#c06014" layoutX="204.0" layoutY="274.0" prefHeight="43.0" prefWidth="378.0" promptText="Ingrese el teléfono">
+               <font>
+                  <Font name="Arial" size="24.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="tfmail_cl" focusColor="#c06014" layoutX="207.0" layoutY="333.0" prefHeight="43.0" prefWidth="377.0" promptText="Ingrese el correo">
+               <font>
+                  <Font name="Arial" size="24.0" />
+               </font>
+            </JFXTextField>
+            <Label layoutX="27.0" layoutY="81.0" text="ID:">
+               <font>
+                  <Font name="Arial" size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="27.0" layoutY="153.0" text="Nombre:">
+               <font>
+                  <Font name="Arial" size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="29.0" layoutY="213.0" text="Dirección: ">
+               <font>
+                  <Font name="Arial" size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="27.0" layoutY="280.0" text="Teléfono:">
+               <font>
+                  <Font name="Arial" size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="28.0" layoutY="342.0" text="Correo: ">
+               <font>
+                  <Font name="Arial" size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="21.0" layoutY="26.0" text="REGISTRO DE CLIENTES">
+               <font>
+                  <Font name="Arial Bold" size="34.0" />
+               </font>
+            </Label>
+            <Separator layoutX="29.0" layoutY="398.0" opacity="0.21" prefHeight="5.0" prefWidth="550.0" style="-fx-background-color: #000000;" />
+            <JFXButton fx:id="btregistrar_cl" layoutX="29.0" layoutY="416.0" onAction="#agregarCliente" style="-fx-background-color: #536162;" text="Registrar cliente" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="26.0" />
+               </font>
+            </JFXButton>
+            <TableView fx:id="tabla_clientes" layoutX="600.0" layoutY="30.0" prefHeight="545.0" prefWidth="576.0" style="-fx-background-color: gray;">
+              <columns>
+                <TableColumn fx:id="col_idcl" prefWidth="38.0" text="id" />
+                <TableColumn fx:id="col_nomcl" prefWidth="169.0" text="nom" />
+                  <TableColumn fx:id="col_dircl" prefWidth="106.0" text="dir" />
+                  <TableColumn fx:id="col_telcl" prefWidth="93.0" text="tel" />
+                  <TableColumn fx:id="col_mailcl" prefWidth="169.0" text="mail" />
+              </columns>
+            </TableView>
+            <JFXButton fx:id="btmod_cl" layoutX="29.0" layoutY="478.0" onAction="#modificarCliente" style="-fx-background-color: #536162;" text="Modificar cliente" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="26.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btelim_cl" layoutX="29.0" layoutY="541.0" onAction="#eliminarCliente" prefHeight="38.0" prefWidth="224.0" style="-fx-background-color: #536162;" text="Eliminar cliente" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="26.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnew_cl" layoutX="281.0" layoutY="416.0" onAction="#nuevoCliente" style="-fx-background-color: #536162;" text="Nuevo" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="26.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="productPanel" layoutX="-1656.0" layoutY="89.0" prefHeight="831.0" prefWidth="1840.0" style="-fx-background-color: #f3f4ed;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="89.0">
+         <children>
+            <JFXTextField fx:id="tfid_pd" focusColor="#c06014" layoutX="212.0" layoutY="78.0" prefHeight="43.0" prefWidth="385.0" promptText="Ingrese el ID">
+               <font>
+                  <Font name="Arial" size="24.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="tfnom_pd" focusColor="#c06014" layoutX="212.0" layoutY="142.0" prefHeight="43.0" prefWidth="383.0" promptText="Ingrese el nombre">
+               <font>
+                  <Font name="Arial" size="24.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="tfunid_pd" focusColor="#c06014" layoutX="214.0" layoutY="199.0" prefHeight="43.0" prefWidth="380.0" promptText="Ingrese las unidades">
+               <font>
+                  <Font name="Arial" size="24.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="tfprecio_pd" focusColor="#c06014" layoutX="211.0" layoutY="271.0" prefHeight="43.0" prefWidth="378.0" promptText="Ingrese el precio">
+               <font>
+                  <Font name="Arial" size="24.0" />
+               </font>
+            </JFXTextField>
+            <Label layoutX="34.0" layoutY="78.0" text="ID:">
+               <font>
+                  <Font name="Arial" size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="34.0" layoutY="150.0" text="Nombre:">
+               <font>
+                  <Font name="Arial" size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="36.0" layoutY="210.0" text="Unidades:">
+               <font>
+                  <Font name="Arial" size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="34.0" layoutY="277.0" text="Precio">
+               <font>
+                  <Font name="Arial" size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="34.0" layoutY="24.0" text="REGISTRO DE PRODUCTOS">
+               <font>
+                  <Font name="Arial Bold" size="34.0" />
+               </font>
+            </Label>
+            <Separator layoutX="36.0" layoutY="359.0" opacity="0.21" prefHeight="5.0" prefWidth="550.0" style="-fx-background-color: #000000;" />
+            <JFXButton fx:id="btregistrar_pd" layoutX="34.0" layoutY="384.0" onAction="#agregarProducto" style="-fx-background-color: #536162;" text="Registrar producto" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="26.0" />
+               </font>
+            </JFXButton>
+            <TableView fx:id="tabla_productos" layoutX="610.0" layoutY="31.0" prefHeight="534.0" prefWidth="576.0" style="-fx-background-color: gray;">
+               <columns>
+                  <TableColumn fx:id="col_idpd" prefWidth="57.0" text="id" />
+                  <TableColumn fx:id="col_nompd" prefWidth="211.0" text="nom" />
+                  <TableColumn fx:id="col_unidpd" prefWidth="173.0" text="unid" />
+                  <TableColumn fx:id="col_preciopd" prefWidth="134.0" text="precio" />
+               </columns>
+            </TableView>
+            <JFXButton fx:id="btmod_pd" layoutX="34.0" layoutY="446.0" onAction="#modificarProducto" style="-fx-background-color: #536162;" text="Modificar producto" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="26.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btelim_pd" layoutX="36.0" layoutY="507.0" onAction="#eliminarProducto" prefHeight="49.0" prefWidth="250.0" style="-fx-background-color: #536162;" text="Eliminar producto" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="26.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnew_pd" layoutX="325.0" layoutY="384.0" onAction="#nuevoProducto" style="-fx-background-color: #536162;" text="Nuevo" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="26.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="provPanel" layoutX="-176.0" layoutY="90.0" prefHeight="830.0" prefWidth="1840.0" style="-fx-background-color: #f3f4ed;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="90.0">
+         <children>
+            <JFXTextField fx:id="tfid_pv" focusColor="#c06014" layoutX="214.0" layoutY="83.0" prefHeight="43.0" prefWidth="385.0" promptText="Ingrese el ID">
+               <font>
+                  <Font name="Arial" size="24.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="tfnom_pv" focusColor="#c06014" layoutX="214.0" layoutY="147.0" prefHeight="43.0" prefWidth="383.0" promptText="Ingrese el nombre">
+               <font>
+                  <Font name="Arial" size="24.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="tfdir_pv" focusColor="#c06014" layoutX="216.0" layoutY="204.0" prefHeight="43.0" prefWidth="380.0" promptText="Ingrese la dirección">
+               <font>
+                  <Font name="Arial" size="24.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="tftel_pv" focusColor="#c06014" layoutX="213.0" layoutY="276.0" prefHeight="43.0" prefWidth="378.0" promptText="Ingrese el teléfono">
+               <font>
+                  <Font name="Arial" size="24.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="tfmail_pv" focusColor="#c06014" layoutX="216.0" layoutY="335.0" prefHeight="43.0" prefWidth="377.0" promptText="Ingrese el correo">
+               <font>
+                  <Font name="Arial" size="24.0" />
+               </font>
+            </JFXTextField>
+            <Label layoutX="36.0" layoutY="83.0" text="ID:">
+               <font>
+                  <Font name="Arial" size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="36.0" layoutY="155.0" text="Nombre:">
+               <font>
+                  <Font name="Arial" size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="38.0" layoutY="215.0" text="Dirección: ">
+               <font>
+                  <Font name="Arial" size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="36.0" layoutY="282.0" text="Teléfono:">
+               <font>
+                  <Font name="Arial" size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="37.0" layoutY="344.0" text="Correo: ">
+               <font>
+                  <Font name="Arial" size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="36.0" layoutY="22.0" prefHeight="49.0" prefWidth="774.0" text="REGISTRO DE PROVEEDORES">
+               <font>
+                  <Font name="Arial Bold" size="34.0" />
+               </font>
+            </Label>
+            <Separator layoutX="38.0" layoutY="404.0" opacity="0.21" prefHeight="5.0" prefWidth="550.0" style="-fx-background-color: #000000;" />
+            <JFXButton fx:id="btregistar_pv" layoutX="35.0" layoutY="428.0" onAction="#agregarProveedor" style="-fx-background-color: #536162;" text="Registrar proveedor" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="26.0" />
+               </font>
+            </JFXButton>
+            <TableView fx:id="tabla_proveedores" layoutX="610.0" layoutY="30.0" prefHeight="555.0" prefWidth="576.0" style="-fx-background-color: gray;">
+               <columns>
+                  <TableColumn fx:id="col_idpv" prefWidth="37.000030517578125" text="id" />
+                  <TableColumn fx:id="col_nompv" prefWidth="140.0" text="nom" />
+                  <TableColumn fx:id="col_dirpv" prefWidth="160.0" text="dir" />
+                  <TableColumn fx:id="col_telpv" prefWidth="103.0" text="tel" />
+                  <TableColumn fx:id="col_mailpv" prefWidth="134.0" text="mail" />
+               </columns>
+            </TableView>
+            <JFXButton fx:id="btmod_pv" layoutX="35.0" layoutY="489.0" onAction="#modificarProveedor" style="-fx-background-color: #536162;" text="Modificar proveedor" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="26.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btelim_pv" layoutX="35.0" layoutY="547.0" onAction="#eliminarProveedor" prefHeight="49.0" prefWidth="266.0" style="-fx-background-color: #536162;" text="Eliminar proveedor" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="26.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnew_pv" layoutX="346.0" layoutY="428.0" onAction="#nuevoProveedor" style="-fx-background-color: #536162;" text="Nuevo" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="26.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="homePanel" layoutX="6.0" layoutY="90.0" prefHeight="610.0" prefWidth="1200.0" style="-fx-background-color: #f3f4ed;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="90.0">
+         <children>
+            <JFXButton layoutX="718.0" layoutY="57.0" onMouseClicked="#onClientButtonClicked" style="-fx-border-radius: 50px; -fx-background-color: #536162;" text="CLIENTES" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="34.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="718.0" layoutY="143.0" onMouseClicked="#onProductButtonClicked" style="-fx-border-radius: 50px; -fx-background-color: #536162;" text="PRODUCTOS" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="34.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="718.0" layoutY="231.0" onMouseClicked="#onProvButtonClicked" style="-fx-border-radius: 50px; -fx-background-color: #536162;" text="PROVEEDORES" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="34.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="718.0" layoutY="319.0" onMouseClicked="#onPedidoButtonClicked" style="-fx-border-radius: 50px; -fx-background-color: #536162;" text="PEDIDOS" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="34.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="718.0" layoutY="479.0" onMouseClicked="#onExitButtonClicked" style="-fx-border-radius: 50px; -fx-background-color: #536162;" text="SALIR" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="34.0" />
+               </font>
+            </JFXButton>
+            <Text fill="#536162" layoutX="72.0" layoutY="237.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MENÚ DE OPCIONES" wrappingWidth="596.0000175237656">
+               <font>
+                  <Font name="Arial Bold" size="110.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="pedidoPanel" layoutX="-1.0" layoutY="89.0" onDragDetected="#seleccionarCliente" prefHeight="611.0" prefWidth="1200.0" style="-fx-background-color: #f3f4ed;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="89.0">
+         <children>
+            <Label layoutX="39.0" layoutY="30.0" text="REGISTRO DE PEDIDOS">
+               <font>
+                  <Font name="Arial Bold" size="34.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="tfid_pe" focusColor="#c06014" layoutX="178.0" layoutY="76.0" prefHeight="43.0" prefWidth="163.0" promptText="ID">
+               <font>
+                  <Font name="Arial" size="24.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="tfidcl_pe" focusColor="#c06014" layoutX="178.0" layoutY="181.0" prefHeight="43.0" prefWidth="224.0">
+               <font>
+                  <Font name="Arial" size="24.0" />
+               </font>
+            </JFXTextField>
+            <Label layoutX="41.0" layoutY="81.0" text="ID Pedido:">
+               <font>
+                  <Font name="Arial" size="28.0" />
+               </font>
+            </Label>
+            <Label layoutX="41.0" layoutY="192.0" text="ID Cliente:">
+               <font>
+                  <Font name="Arial" size="28.0" />
+               </font>
+            </Label>
+            <Label layoutX="39.0" layoutY="135.0" text="Nombre del cliente:">
+               <font>
+                  <Font name="Arial" size="28.0" />
+               </font>
+            </Label>
+            <Label layoutX="41.0" layoutY="257.0" text="Fecha:">
+               <font>
+                  <Font name="Arial" size="28.0" />
+               </font>
+            </Label>
+            <Label layoutX="341.0" layoutY="258.0" text="Hora:">
+               <font>
+                  <Font name="Arial" size="28.0" />
+               </font>
+            </Label>
+            <Label layoutX="39.0" layoutY="308.0" text="TOTAL:">
+               <font>
+                  <Font name="Arial" size="60.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="tftotal_pe" focusColor="#c06014" layoutX="259.0" layoutY="308.0" prefHeight="69.0" prefWidth="316.0" promptText="Ingrese el correo" text="Total">
+               <font>
+                  <Font name="Arial" size="25.0" />
+               </font>
+            </JFXTextField>
+            <JFXComboBox fx:id="comboBox_nomcl" focusColor="#c06014" layoutX="298.0" layoutY="136.0" prefHeight="31.0" prefWidth="276.0" promptText="Seleccione el nombre del cliente" />
+            <JFXButton fx:id="btnew_pe" layoutX="336.0" layoutY="400.0" onAction="#nuevoPedido" prefHeight="32.0" prefWidth="112.0" style="-fx-background-color: #536162;" text="Nuevo" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="26.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btselecccl" layoutX="420.0" layoutY="187.0" onAction="#seleccionarCliente" prefHeight="43.0" prefWidth="153.0" style="-fx-background-color: #536162;" text="Seleccionar" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="22.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btgenerar_ticket" layoutX="852.0" layoutY="506.0" onAction="#abirTicket" prefHeight="52.0" prefWidth="244.0" style="-fx-background-color: #536162;" text="Generar ticket" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="28.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="55.0" fitWidth="58.0" layoutX="1112.0" layoutY="505.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons8_receipt_70px.png" />
+               </image>
+            </ImageView>
+            <JFXDatePicker fx:id="date_pe" defaultColor="#536162" layoutX="147.0" layoutY="258.0" prefHeight="31.0" prefWidth="192.0" />
+            <JFXTimePicker fx:id="time_pe" defaultColor="#536162" layoutX="420.0" layoutY="258.0" prefHeight="31.0" prefWidth="151.0" />
+            <JFXButton fx:id="btmod_pe" layoutX="39.0" layoutY="465.0" onAction="#modificarPedido" prefHeight="49.0" prefWidth="250.0" style="-fx-background-color: #536162;" text="Modificar Pedido" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="26.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btregistrar_pe" layoutX="39.0" layoutY="398.0" onAction="#agregarPedido" prefHeight="52.0" prefWidth="250.0" style="-fx-background-color: #536162;" text="Registrar Pedido" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="26.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btelim_pe" layoutX="39.0" layoutY="532.0" onAction="#eliminarPedido" prefHeight="43.0" prefWidth="250.0" style="-fx-background-color: #536162;" text="Eliminar Pedido" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="26.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btprodped" layoutX="507.0" layoutY="506.0" onAction="#abirVentProd" prefHeight="46.0" prefWidth="316.0" style="-fx-background-color: #c06014;" text="Productos del pedido" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="28.0" />
+               </font>
+            </JFXButton>
+            <TableView fx:id="tabla_listapedidos" layoutX="600.0" layoutY="30.0" prefHeight="442.0" prefWidth="585.0">
+              <columns>
+                <TableColumn fx:id="col_idlipe" prefWidth="36.0" text="ID" />
+                <TableColumn fx:id="col_idcllipe" minWidth="0.0" prefWidth="77.0" text="ID Cliente" />
+                  <TableColumn fx:id="col_nomlipe" prefWidth="220.0" text="Nombre Cliente" />
+                  <TableColumn fx:id="col_totallipe" prefWidth="99.0" text="Total" />
+                  <TableColumn fx:id="col_fechalipe" prefWidth="87.0" text="Fecha" />
+                  <TableColumn fx:id="col_horalipe" prefWidth="66.0" text="Hora" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="addPdPanel" layoutX="100.0" layoutY="145.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1000.0" style="-fx-background-color: #536162;" visible="false">
+         <children>
+            <Text fill="WHITE" layoutX="18.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Añadir productos al pedido">
+               <font>
+                  <Font name="Arial Bold" size="27.0" />
+               </font>
+            </Text>
+            <JFXTextField fx:id="tfcantidad_nuevavent" focusColor="WHITE" layoutX="173.0" layoutY="184.0" prefHeight="53.0" prefWidth="289.0" promptText="Ingrese la cantidad" unFocusColor="#fffefe">
+               <font>
+                  <Font name="Arial" size="29.0" />
+               </font>
+            </JFXTextField>
+            <Label layoutX="25.0" layoutY="199.0" text="Cantidad:" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="33.0" />
+               </font>
+            </Label>
+            <Label layoutX="28.0" layoutY="263.0" text="Precio: " textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="33.0" />
+               </font>
+            </Label>
+            <Label layoutX="28.0" layoutY="134.0" text="Nombre: " textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="33.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="112.0" fitWidth="169.0" layoutX="349.0" layoutY="374.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/box-1297327_640.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="btAceptar" layoutX="28.0" layoutY="396.0" onAction="#aceptarAniadirProducto" prefHeight="52.0" prefWidth="184.0" style="-fx-background-color: #32a852;" text="Agregar">
+               <font>
+                  <Font name="Arial" size="37.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btCancelar" layoutX="831.0" layoutY="396.0" onAction="#cancelarAniadirProducto" style="-fx-background-color: #e34b4b;" text="Cerrar">
+               <font>
+                  <Font name="Arial" size="37.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="112.0" fitWidth="89.0" layoutX="377.0" layoutY="330.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons8_down_127px_1.png" />
+               </image>
+            </ImageView>
+            <TableView fx:id="tabla_pedido" layoutX="473.0" layoutY="26.0" prefHeight="343.0" prefWidth="513.0" style="-fx-background-color: gray;">
+               <columns>
+                  <TableColumn fx:id="col_index" prefWidth="53.0" text="Index" />
+                  <TableColumn fx:id="col_idpe" text="Id pedido" />
+                  <TableColumn fx:id="col_idprod" prefWidth="93.0" text="Id producto" />
+                  <TableColumn fx:id="col_nompe" minWidth="0.0" prefWidth="69.0" text="Nombre " />
+                  <TableColumn fx:id="col_prepe" prefWidth="62.0" text="Precio " />
+                  <TableColumn fx:id="col_unidpe" prefWidth="78.0" text="Unidades" />
+                  <TableColumn fx:id="col_subpe" prefWidth="78.0" text="Subtotal" />
+               </columns>
+            </TableView>
+            <Separator layoutX="25.0" layoutY="68.0" prefHeight="3.0" prefWidth="435.0" />
+            <Label fx:id="tfnom_nuevavent1" layoutX="164.0" layoutY="134.0" prefHeight="21.0" prefWidth="284.0" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="34.0" />
+               </font>
+            </Label>
+            <Label fx:id="tfprecio_nuevavent1" layoutX="138.0" layoutY="263.0" prefHeight="21.0" prefWidth="284.0" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="34.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="comboBox_nompd" focusColor="WHITE" layoutX="25.0" layoutY="87.0" prefHeight="31.0" prefWidth="255.0" promptText="Seleccione nombre del producto" style="-fx-background-color: #ffffff;" unFocusColor="#fff9f9" />
+            <JFXButton fx:id="btadd_pe" layoutX="292.0" layoutY="81.0" onAction="#agregarProductoPedido" prefHeight="43.0" prefWidth="171.0" style="-fx-background-color: #FFFFFF;" text="Seleccionar" textFill="#536162">
+               <font>
+                  <Font name="Arial" size="22.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btelimpp" layoutX="28.0" layoutY="311.0" onAction="#eliminarRegistroPedido" prefHeight="43.0" prefWidth="357.0" style="-fx-background-color: #FFFFFF;" text="Eliminar un producto de la lista" textFill="#536162">
+               <font>
+                  <Font name="Arial" size="22.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="ticket_panel" layoutX="31.0" layoutY="117.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="545.0" prefWidth="521.0" style="-fx-background-color: #536162;">
+         <children>
+            <Separator layoutX="15.0" layoutY="58.0" prefHeight="7.0" prefWidth="486.0" style="-fx-background-color: #FFFFFF;" />
+            <Text fill="#ff6f00" layoutX="14.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ticket">
+               <font>
+                  <Font name="Arial" size="29.0" />
+               </font>
+            </Text>
+            <JFXTextArea fx:id="taTicket" layoutX="15.0" layoutY="82.0" prefHeight="401.0" prefWidth="486.0" style="-fx-background-color: #FFFFFF;" />
+            <JFXButton fx:id="btCerrarTicket" layoutX="362.0" layoutY="499.0" onAction="#cerrarTicket" prefHeight="32.0" prefWidth="139.0" style="-fx-background-color: #f5425a;" text="Cerrar ticket">
+               <font>
+                  <Font name="Arial" size="17.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

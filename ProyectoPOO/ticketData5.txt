@@ -1,0 +1,25 @@
+		R E C I B O   D E   C O M P R A
+
+		Villa Chago S.A. de C.V.
+
+		Id del pedido: 5
+
+		Nombre del cliente: Fernando
+
+		============================================
+
+		Producto		Precio		Unidades			Subtotal
+		Chiles		$12.9			23			$296.7
+		Leche		$17.88			12			$214.56
+		Barra de		$34.6			8			$276.8
+		============================================
+
+		Fecha de la compra:	2021-05-11
+
+		Hora de la compra:	08:54:00
+
+		TOTAL DE LA COMPRA:	$788.06
+
+ 
+
+		Creado por ODCAJKN SYSTEM

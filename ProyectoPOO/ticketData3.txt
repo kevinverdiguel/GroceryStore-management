@@ -1,0 +1,13 @@
+Villa Chago S.A. de C.V.
+Id del pedido: 3
+Nombre del cliente: Angel Eduardo
+======================
+Producto		Precio		Unidades		Subtotal
+======================
+Fecha de la compra:	2021-05-01
+Hora de la compra:	15:53:24
+TOTAL DE LA COMPRA:	$0.0
+ 
+
+
+Creado por ODCAJKN SYSTEM

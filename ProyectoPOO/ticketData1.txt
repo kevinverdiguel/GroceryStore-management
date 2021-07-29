@@ -1,0 +1,13 @@
+Villa Chago S.A. de C.V.
+Id del pedido: 1
+Nombre del cliente: Diego Alvarez
+======================
+Producto		Precio		Unidades		Subtotal
+======================
+Fecha de la compra:	2021-01-05
+Hora de la compra:	00:00:00
+TOTAL DE LA COMPRA:	$0.0
+ 
+
+
+Creado por ODCAJKN SYSTEM
